@@ -1,3 +1,5 @@
+Link to Paper : https://ieeexplore.ieee.org/document/10364166
+
 Results on local Validation
 
 | AUPRC | AUROC | Accuracy  | F-Measure | Challenge Score  |
@@ -6,13 +8,7 @@ Results on local Validation
 
 
 
-# Python example code for the PhysioNet/Computing in Cardiology Challenge 2021
-
-## What's in this repository?
-
-We implemented a random forest classifier that uses age, sex, and the root mean square of the ECG lead signals as features. This simple example illustrates how to format your Python entry for the Challenge, and it should finish running on any of the Challenge training datasets in a minute or two on a personal computer. However, it is **not** designed to score well (or, more accurately, it is designed not to score well), so you should not use it as a baseline for your model's performance.
-
-This code uses four main scripts, as described below, to train and test your model for the 2021 Challenge.
+# Python code for the PhysioNet/Computing in Cardiology Challenge 2021
 
 ## How do I run these scripts?
 
@@ -33,39 +29,6 @@ After training your model and obtaining test outputs with above commands, you ca
 
 where `labels` is a folder containing files with one or more labels for each ECG recording, such as the training database on the PhysioNet webpage; `outputs` is a folder containing files with outputs produced by your models for those recordings; `scores.csv` (optional) is a collection of scores for your models; and `class_scores.csv` (optional) is a collection of per-class scores for your models.
 
-## Which scripts I can edit?
-
-We will run the `train_model.py` and `test_model.py` scripts to run your training code and testing code, so please check these scripts and the functions that they call.
-Our example code uses four main scripts to train and test your model for the 2021 Challenge:
-
-Please edit the following script to add your training and testing code:
-
-* `team_code.py` is a script with functions for training your model and running your trained models.
-
-Please do **not** edit the following scripts. We will use the unedited versions of these scripts.
-
-* `train_model.py` is a script for calling your training code on the training data.
-* `test_model.py` is a script for calling your trained models on the test data.
-* `helper_code.py` is a script with helper variables and functions that we used for our code. You are welcome to use them in your code.
-
-These four scripts must remain in the root path of your repository, but you can put other scripts and other files elsewhere in your repository.
-
-## How do I train, save, load, and run my model?
-
-To train and save your models, please edit the `training_code` function in the `team_code.py` script. Please do not edit the input arguments or output arguments of the `training_code` function.
-
-To load and run your trained model, please edit the `load_twelve_lead_model`, `load_six_lead_model`, `load_three_lead_model`, and `load_two_lead_model` functions as well as the `run_twelve_lead_model`, `run_six_lead_model`, `run_three_lead_model` and `run_two_lead_model` functions in the `team_code.py` script, which takes an ECG recording as an input and returns the class labels and probabilities for the ECG recording as outputs. Please do not edit the input or output arguments of the functions for loading or running your models.
-
-## What else is in this repository?
-
-This README has instructions for running the example code and writing and running your own code.
-
-We also included a script, `extract_leads_wfdb.py`, for extracting reduced-lead sets from the training data. You can use this script to produce reduced-lead data that you can use with your code. You can run this script using the following commands:
-
-    python extract_leads_wfdb.py -i twelve_lead_directory -o two_lead_directory -l II V5 
-    python extract_leads_wfdb.py -i twelve_lead_directory -o six_lead_directory -l I II III aVL aVR aVF 
-
-Here, the `-i` argument gives the input folder, the `-o` argument gives the output folder, and the `-l` argument gives the leads.
 
 ## How do I run these scripts in Docker?
 

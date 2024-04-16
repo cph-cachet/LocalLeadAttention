@@ -1,0 +1,9 @@
+numpy
+scipy
+scikit-learn
+joblib
+pandas
+tabulate
+tqdm
+pandas
+scikit-multilearn

@@ -1,5 +1,7 @@
 Link to Paper : https://ieeexplore.ieee.org/document/10364166
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/reading-between-the-leads-local-lead/ecg-classification-on-physionet-challenge-1)](https://paperswithcode.com/sota/ecg-classification-on-physionet-challenge-1?p=reading-between-the-leads-local-lead)
+
 Results on local Validation
 
 | AUPRC | AUROC | Accuracy  | F-Measure | Challenge Score  |
